@@ -30,12 +30,16 @@ public class OrdenaString {
 		 
 		 palavras.sort((Comparator.comparing(s -> s.length())));
 		 // equivalente a linha acima
-		 palavras.sort((Comparator.comparing(String::length)));
-
+		 palavras.sort(Comparator.comparing(String::length));		 
+		 //metodo sort usand ocriterio Case_Insensitive_Order;
+		 palavras.sort(String.CASE_INSENSITIVE_ORDER);
 		 
-		 
+		 palavras.sort(Comparator.comparing(String::length));		 
 	   
-		palavras.forEach(palavra -> System.out.println(palavra)); } }
+		palavras.forEach(palavra -> System.out.println(palavra));
+		palavras.forEach(System.out::println);
+	
+	} }
 
 
 
