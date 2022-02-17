@@ -11,22 +11,29 @@ public class OrdenaString {
 		
 		List<String> palavras = new ArrayList<String>();
 		
-		palavras.add("Alura");
+		palavras.add("Alura Online");
 		palavras.add("Casa do Codigo");
 		palavras.add("Caelum");
 		
 		
-		Comparator <String> comparador = new ComparadorPorTamanho();
-		Collections.sort(palavras,comparador);
+		//Comparator <String> comparador = new ComparadorPorTamanho();
+		//Collections.sort(palavras,comparador);
 		
 		palavras.forEach(palavra -> System.out.println(palavra));
        
 		//Mudando o criterio de ordenação ja no metodo sort 
 		//conhecimento adquerido nos cursos anteriores
 		
-		 palavras.sort((s1,s2)-> Integer.compare(s1.length(),s2.length()));
+		// palavras.sort((s1,s2)-> Integer.compare(s1.length(),s2.length()));
 		
 
+		 
+		 palavras.sort((Comparator.comparing(s -> s.length())));
+		 // equivalente a linha acima
+		 palavras.sort((Comparator.comparing(String::length)));
+
+		 
+		 
 	   
 		palavras.forEach(palavra -> System.out.println(palavra)); } }
 
