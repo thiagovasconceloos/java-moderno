@@ -23,22 +23,11 @@ public class OrdenaString {
        
 		//Mudando o criterio de ordenação ja no metodo sort 
 		//conhecimento adquerido nos cursos anteriores
-		 palavras.sort((s1,s2)-> { 
-				if(s1.length() < s2.length()) {
-					return -1;
-				} 
-				if(s1.length() > s2.length()) {
-					return 1;
-				}
-					
-					
-					
-				return 0; } );
+		
+		 palavras.sort((s1,s2)-> Integer.compare(s1.length(),s2.length()));
 		
 
-	
-	
-	
+	   
 		palavras.forEach(palavra -> System.out.println(palavra)); } }
 
 
